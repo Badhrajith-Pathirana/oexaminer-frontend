@@ -24,18 +24,15 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/node_modules/bootstrap/dist/css/bootstrap.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/plugins/fontawesome-free/css/all.min.css",
-              "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css",
               "src/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
               "src/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
               "src/plugins/jqvmap/jqvmap.min.css",
               "src/dist/css/adminlte.min.css",
               "src/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
               "src/plugins/daterangepicker/daterangepicker.css",
-              "src/plugins/summernote/summernote-bs4.css",
-              "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700",
-              "src/docs/assets/css/button.css"
+              "src/plugins/summernote/summernote-bs4.css"
             ],
             "scripts": [
               "src/plugins/jquery/jquery.min.js",
@@ -52,7 +49,7 @@
               "src/dist/js/adminlte.js",
               "src/dist/js/pages/dashboard.js",
               "src/dist/js/demo.js"
-              
+
             ]
           },
           "configurations": {

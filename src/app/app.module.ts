@@ -4,12 +4,20 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ExamdetailsComponent } from './examdetails/examdetails.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
+import { StdDashboardComponent } from './std-dashboard/std-dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { FootarComponent } from './footar/footar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ExamdetailsComponent,
+    SidebarNavComponent,
+    StdDashboardComponent,
+    HeaderComponent,
+    FootarComponent,
     
   ],
   imports: [

@@ -8,6 +8,7 @@ import { SidebarNavComponent } from './sidebar-nav/sidebar-nav.component';
 import { StdDashboardComponent } from './std-dashboard/std-dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
+import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FootarComponent } from './footar/footar.component';
     StdDashboardComponent,
     HeaderComponent,
     FootarComponent,
+    LecDashboardComponent,
     
   ],
   imports: [

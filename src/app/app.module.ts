@@ -9,6 +9,7 @@ import { StdDashboardComponent } from './std-dashboard/std-dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
+import { QuestionComponent } from './question/question.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
     HeaderComponent,
     FootarComponent,
     LecDashboardComponent,
+    QuestionComponent,
     
   ],
   imports: [

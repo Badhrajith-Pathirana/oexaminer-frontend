@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 
 import { AppComponent } from './app.component';
 import { ExamdetailsComponent } from './examdetails/examdetails.component';
@@ -26,9 +28,12 @@ import { QuestionComponent } from './question/question.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule);

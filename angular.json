@@ -32,7 +32,11 @@
               "src/dist/css/adminlte.min.css",
               "src/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
               "src/plugins/daterangepicker/daterangepicker.css",
-              "src/plugins/summernote/summernote-bs4.css"
+              "src/plugins/summernote/summernote-bs4.css",
+              "src/vendor/bootstrap/css/bootstrap.min.css",
+              "src/vendor/fontawesome-free/css/all.min.css",
+              "src/vendor/datatables/dataTables.bootstrap4.css",
+              "src/css/sb-admin.css"
              
             ],
             "scripts": [

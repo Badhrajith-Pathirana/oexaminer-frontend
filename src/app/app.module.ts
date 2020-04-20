@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FootarComponent } from './footar/footar.component';
 import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
 import { QuestionComponent } from './question/question.component';
+import { ExamManageComponent } from './exam-manage/exam-manage.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { QuestionComponent } from './question/question.component';
     FootarComponent,
     LecDashboardComponent,
     QuestionComponent,
+    ExamManageComponent,
     
   ],
   imports: [

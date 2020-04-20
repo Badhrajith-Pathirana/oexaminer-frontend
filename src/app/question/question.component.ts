@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuestionComponent implements OnInit {
 
+  answerList: any [] =  [{
+    id: 'Test1',
+    value: 'TestingOne'
+  }, {
+    id: 'Test2',
+    value: 'TestingTwo'
+  }];
+
   constructor() { }
 
   ngOnInit() {

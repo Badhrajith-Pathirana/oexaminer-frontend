@@ -67,12 +67,10 @@
 
         <div class="col-75">
           <select id="country" name="country">
-            <option value="australia">option1</option>
-            <option value="canada">option2</option>
-            <option value="usa">option3</option>
+            <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
           </select>
         </div>
-      
+
         <!-- <div class="btn btn-primary btn-block-row">
               <a class="btn btn-primary btn-block"  href="login.html">Save and Add another Question</a>
             </div>
@@ -97,7 +95,7 @@
             <a class="btn btn-primary btn-block" href ="exam management.html" >Finish</a>
           </div>
           </th>
-          <th> 
+          <th>
           </th>
           <th>
           <nav aria-label="...">
@@ -125,10 +123,10 @@
       </form>
       </div>
     </div>
-    
+
   </div>
 
 
 
-  
+
 

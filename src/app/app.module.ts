@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
+import {  HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ExamdetailsComponent } from './examdetails/examdetails.component';
@@ -29,7 +30,8 @@ import { QuestionComponent } from './question/question.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

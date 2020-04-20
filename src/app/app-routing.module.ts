@@ -11,8 +11,6 @@ const routes: Routes = [
   { path: 'LecturerDashboard', component: LecDashboardComponent },
   { path: 'StudentDashboard', component: StdDashboardComponent },
   { path: 'CreateQuestion', component: QuestionComponent },
-  
-  
 ];
 
 @NgModule({

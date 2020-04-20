@@ -14,7 +14,9 @@ import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
 import { QuestionComponent } from './question/question.component';
 import { CreateLoginComponent } from './create-login/create-login.component';
 import { CreateSignupComponent } from './create-signup/create-signup.component';
+import { ServiceComponent } from './service/service.component';
 
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,12 @@ import { CreateSignupComponent } from './create-signup/create-signup.component';
     QuestionComponent,
     CreateLoginComponent,
     CreateSignupComponent,
+<<<<<<< Updated upstream
 
+=======
+    ServiceComponent,
+    
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,

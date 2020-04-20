@@ -1,32 +1,132 @@
+<div class="content-wrapper">
+    <div id="content-wrapper">
+  
+      <div class="container-fluid">
+  
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+          <li class="breadcrumb-item active">Add New Exam </li>
+        </ol>
+  
+      </div>
+  
+  
+  
+  <div class="container">
+  <div class="card card-register mx-auto mt-5">
+    <div class="card-header">Exam Details</div>
+    <div class="card-body">
+      <form #examForm="ngForm" (ngSubmit)="saveExam(examForm)">
+     
+        <div class="form-group">
+        </div>
+  
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" id="title" name="title" [(ngModel)]="title" class="form-control" placeholder="Title" required = "required"   >
+                <label for="title">Exam Title</label>
+              </div>
+            </div>
+            
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <label for="module">Module</label>
+                <select name="module" id="module" ngModel class="custom-select" >
+                    <option *ngFor="let mod of modules" [value]="
+                    mod.id" >
+                        {{mod.name}
+                    </option>
+                </select>  
+            </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="date" name="date" [(ngModel)]="date" class="form-control" placeholder="Date" required="required">
+                  <label for="date">Date</label>
+                </div>
+              </div>
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" id="time" name="time" [(ngModel)]="time" class="form-control" placeholder="Time" required="no" >
+                <label for="time">Exam Duration(min)</label>
+              </div>
+            </div>
+          </div>
+        </div>
+                
+        <div class="form-group">
+          <div class="form-row">
+            <div class="col-md-6">
+                <div class="form-label-group">
+                  <input type="text" id="qcount" name="qcount" [(ngModel)]="qcount" class="form-control" placeholder="Total Questions" required="no">
+                  <label for="qcount">Total Questions</label>
+                </div>
+              </div>
 
-<div class="container">
-  <form action="">
-  <div class="row">
-    <div class="col-sm">
-      <input type="text" class="form-control" id="examTitle"  placeholder="Exam title">
-    </div>
-    <div class="col-sm">
-      <input type="text" class="form-control" id="examDuration"  placeholder="Time Duration">
-    </div>
+            <div class="col-md-6">
+              <div class="form-label-group">
+                <input type="text" id="marks" name="marks" [(ngModel)]="marks" class="form-control"  placeholder="Marks"  required="required">
+                <label for="marks">Marks</label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+      <table style="width:100%">
+        <tr>
+        <th>
+        <div class ="btn btn-primary btn-block-row">
+          <a class="btn btn-primary btn-block"  href="">Cancel</a>
+        </div>
+    
+        <div class="btn btn-primary btn-block-row">
+          <!-- <a class="btn btn-primary btn-block">Done</a> -->
+          <button type="submit" class="btn btn-primary" routerLink="/CreateQuestion">Done</button>
+        </div>
+    <!-- </div> -->
+        </th>
+        <th> 
+        </th>
+        
+        <th>
+          <nav aria-label="...">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item "><a class="" href="">2</a></li>
+              <li class="page-item active">
+                <span class="page-link">
+                        3
+                <span class="sr-only">(current)</span>
+                </span>
+              </li>
+              <li class="page-item"><a class="" href="">4</a></li>
+              <li class="page-item">
+              <a class="page-link" >Next</a>
+              </li>
+              </ul>
+              </nav>
+            </th>  
+            </tr>
+          
+    </table>
+   </form>
+   </div>
+   </div>
+   </div>
+   </div>
   </div>
-  <div class="row">
-    <div class="col-sm">
-      <input type="text" class="form-control" id="marks"  placeholder="Marks">
-    </div>
-    <div class="col-sm">
-      <input type="text" class="form-control" id="instructions"  placeholder="Instructions">
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-sm">
-      <input type="text" class="form-control" id="module"  placeholder="Module">
-    </div>
-    <div class="col-sm">
-      <input type="text" class="form-control" id="questionCount"  placeholder="Question Count">
-    </div>
-  </div>
-  <button type="button" class="btn btn-primary">Continue</button>
-</form>
-</div>
 
+  Angular generated form model : {{examForm.value | json}}
+  

@@ -33,6 +33,7 @@
               "src/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
               "src/plugins/daterangepicker/daterangepicker.css",
               "src/plugins/summernote/summernote-bs4.css"
+             
             ],
             "scripts": [
               "src/plugins/jquery/jquery.min.js",

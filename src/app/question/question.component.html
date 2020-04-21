@@ -64,7 +64,7 @@
             <label for="country">Answer</label>
           </div>
           <div class="col-75">
-            <select id="country" name="country">
+            <select id="answer" name="answer">
               <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
               <option value="usa">option4</option>
             </select>
@@ -75,7 +75,7 @@
           <tr>
           <th>
           <div class="btn btn-primary btn-block-row">
-            <a class="btn btn-primary btn-block" (click)="reset()">Save and Add Question</a>
+            <a class="btn btn-primary btn-block">Save and Add Question</a>
           </div>
 
           <div class="btn btn-primary btn-block-row">

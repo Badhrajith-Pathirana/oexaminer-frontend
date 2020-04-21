@@ -17,6 +17,10 @@ export class ExamdetailsComponent implements OnInit {
   modules: Module[]; 
   title: string;
   module: string;
+  date: string;
+  time: string;
+  qcount: string;
+  marks: string;
   
   selectedModule: number;
 
@@ -33,10 +37,10 @@ export class ExamdetailsComponent implements OnInit {
     this.selectedModule = 2;
   }
 
-  //TODO: remove this method
-  saveExam1(exForm: NgForm): void{
-    console.log(exForm.value);
-  }
+  // //TODO: remove this method
+  // saveExam1(exForm: NgForm): void{
+  //   console.log(exForm.value);
+  // }
 
   saveExam():void{
       this.exams.push(this.exam);

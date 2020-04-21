@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ExamManageComponent } from './exam-manage/exam-manage.component';
+import { ExamViewComponent } from './exam-view/exam-view.component';
 
 const routes: Routes = [
   { path: 'CreateExam', component: ExamdetailsComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'StudentDashboard', component: StdDashboardComponent },
   { path: 'CreateQuestion', component: QuestionComponent },
   { path: 'ExamManage', component: ExamManageComponent },
+  { path: 'ExamView', component: ExamViewComponent }
 ];
 
 @NgModule({

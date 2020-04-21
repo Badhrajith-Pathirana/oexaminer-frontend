@@ -14,6 +14,7 @@ import { FootarComponent } from './footar/footar.component';
 import { LecDashboardComponent } from './lec-dashboard/lec-dashboard.component';
 import { QuestionComponent } from './question/question.component';
 import { ExamManageComponent } from './exam-manage/exam-manage.component';
+import { ExamViewComponent } from './exam-view/exam-view.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ExamManageComponent } from './exam-manage/exam-manage.component';
     LecDashboardComponent,
     QuestionComponent,
     ExamManageComponent,
+    ExamViewComponent,
     
   ],
   imports: [

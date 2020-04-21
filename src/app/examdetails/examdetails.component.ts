@@ -14,10 +14,10 @@ export class ExamdetailsComponent implements OnInit {
 
   exams: Array<ExamTemp> = [];
   exam: ExamTemp= new ExamTemp('','','','','','');
-  modules: Module[]; 
+  modules: Module[];
   title: string;
   module: string;
-  
+
   selectedModule: number;
 
   constructor(private examService:ExamService) { }

@@ -13,8 +13,6 @@
   
       </div>
   
-  
-  
   <div class="container">
   <div class="card card-register mx-auto mt-5">
     <div class="card-header">Exam Details</div>
@@ -35,12 +33,10 @@
             
             <div class="col-md-6">
               <div class="form-label-group">
-                <label for="module">Module</label>
-                <select name="module" id="module" ngModel class="custom-select" >
-                    <option *ngFor="let mod of modules" [value]="
-                    mod.id" >
-                        {{mod.module}}
-                    </option>
+                <!-- <label for="module">Module</label> -->
+                <select  id="module" name="module" [(ngModel)]="selectedModule">
+                    <option *ngFor="let mod of modules" [value]="mod.id" >{{mod.module}}</option>
+                    <option value="usa">Module</option>
                 </select>  
             </div>
             </div>
@@ -98,7 +94,6 @@
         <th> 
         </th>
         </tr>
-          
     </table>
    </form>
    </div>
@@ -106,7 +101,6 @@
    </div>
    </div>
    Angular generated form model : {{examForm.value | json}}
-
   </div>
 
   

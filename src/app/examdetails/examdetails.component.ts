@@ -14,27 +14,32 @@ export class ExamdetailsComponent implements OnInit {
 
   exams: Array<ExamTemp> = [];
   exam: ExamTemp= new ExamTemp('','','','','','');
-  modules: Module[] = [
-    {id:1,module:"Java"},
-    {id:2,module:"JavaScript"},
-    {id:3,module:"Angular"},
-    {id:4,module:"Ruby"},
-    {id:5,module:"Python"},
-  ];
+  modules: Module[]; 
+  title: string;
+  module: string;
+  
+  selectedModule: number;
 
   constructor(private examService:ExamService) { }
 
   ngOnInit() {
-    console.log("Yoooo");
+    this.modules= [
+      {id:1,module:"Java"},
+      {id:2,module:"JavaScript"},
+      {id:3,module:"Angular"},
+      {id:4,module:"Ruby"},
+      {id:5,module:"Python"},
+    ];
+    this.selectedModule = 2;
   }
 
+  //TODO: remove this method
   saveExam1(exForm: NgForm): void{
     console.log(exForm.value);
   }
 
   saveExam():void{
       this.exams.push(this.exam);
-      console.log("done");
       // this.examService.saveExam(this.exam).subscribe(id=>{
       //   alert(id);
       // },
@@ -43,5 +48,5 @@ export class ExamdetailsComponent implements OnInit {
       // })
       // this.exam = new Exam('','','','','','');
   }
-
 }
+

@@ -63,35 +63,21 @@
           <div class="col-25">
             <label for="country">Answer</label>
           </div>
-        </div>
-
-        <div class="col-75">
-          <select id="country" name="country">
-            <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
-            <option value="usa">option4</option>
-          </select>
-        </div>
-
-        <!-- <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block"  href="login.html">Save and Add another Question</a>
-            </div>
-              <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block" href="login.html">Cancel</a>
-            </div>
-            <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block"  href="login.html">Finish</a>
-            </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
+              <option value="usa">option4</option>
+            </select>
           </div>
-        -->
+        </div>
+        
         <table style="width:100%">
           <tr>
           <th>
           <div class="btn btn-primary btn-block-row">
-            <a class="btn btn-primary btn-block"  href="add qestions.html">Save and Add Question</a>
+            <a class="btn btn-primary btn-block" (click)="reset()">Save and Add Question</a>
           </div>
-            <div class="btn btn-primary btn-block-row">
-            <a class="btn btn-primary btn-block" href="add qestions.html">Cancel</a>
-          </div>
+
           <div class="btn btn-primary btn-block-row">
             <a class="btn btn-primary btn-block" href ="exam management.html" >Finish</a>
           </div>

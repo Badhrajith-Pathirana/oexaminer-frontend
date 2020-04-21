@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Question } from '../dto/question';
+import { ExamService } from '../service/exam.service';
 
 @Component({
   selector: 'app-question',
@@ -14,8 +16,11 @@ export class QuestionComponent implements OnInit {
     id: 'Test2',
     value: 'TestingTwo'
   }];
+  questions: Question[];
+  question:Question = new Question('',['','','',''],'');
+  answers: String[4];
 
-  constructor() { }
+  constructor(private examService:ExamService) { }
 
   ngOnInit() {
   }

@@ -1,8 +1,9 @@
-import { Module } from './../models/module.model';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-
+import { Exam } from '../dto/exam';
+import { ExamService } from '../service/exam.service';
+import { ExamTemp } from '../dto/examtemp';
+import { Module } from '../dto/module';
 
 @Component({
   selector: 'app-examdetails',
@@ -11,36 +12,41 @@ import { NgForm } from '@angular/forms';
 })
 export class ExamdetailsComponent implements OnInit {
 
-  modules: Module[] = [
-    {id:1, name:'Java'},
-    {id:2, name:'NodeJS'},
-    {id:3, name:'Angular'},
-    {id:4, name:'Javascript'},
-    {id:5, name:'Python'},
-    {id:6, name:'Ruby'},
-    {id:7, name:'Swift'}
-  ]
+  exams: Array<ExamTemp> = [];
+  exam: ExamTemp= new ExamTemp('','','','','','');
+  modules: Module[]; 
+  title: string;
+  module: string;
+  
+  selectedModule: number;
 
-  // exam={
-
-  // }
-
-  constructor(
-      // private config:ConfigService
-      
-  ) { }
+  constructor(private examService:ExamService) { }
 
   ngOnInit() {
-    // this.exam = this.getExam();
-    console.log(this.modules);
+    this.modules= [
+      {id:1,module:"Java"},
+      {id:2,module:"JavaScript"},
+      {id:3,module:"Angular"},
+      {id:4,module:"Ruby"},
+      {id:5,module:"Python"},
+    ];
+    this.selectedModule = 2;
   }
 
-  // getExam(){
-  //   return this.config.getConfig().exam;
-  // }
-
-  saveExam(exForm: NgForm): void{
+  //TODO: remove this method
+  saveExam1(exForm: NgForm): void{
     console.log(exForm.value);
   }
 
+  saveExam():void{
+      this.exams.push(this.exam);
+      // this.examService.saveExam(this.exam).subscribe(id=>{
+      //   alert(id);
+      // },
+      // error=>{
+      //   console.log(error);
+      // })
+      // this.exam = new Exam('','','','','','');
+  }
 }
+

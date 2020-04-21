@@ -13,84 +13,71 @@
       </div>
 
       <div class="container">
-        <form action="/action_page.php">
+        <form #questionForm="ngForm">
         <div class="row">
           <div class="col-25">
-            <label for="qtn">Question Title*</label>
+            <label for="qtn">Question Title</label>
           </div>
           <div class="col-75">
-            <input type="text" id="qtn" name="qtn" placeholder="">
+            <input type="text" id="qtn" name="qtn" [(ngModel)]="qtn" placeholder="" required>
           </div>
         </div>
 
         <div class="row">
           <div class="col-25">
-            <label for="otn1">Option1*</label>
+            <label for="otn1">Option1</label>
           </div>
           <div class="col-75">
-            <input type="text" id="otn1" name="otn1" placeholder="">
+            <input type="text" id="otn1" name="otn1" [(ngModel)]="otn1" placeholder="">
           </div>
         </div>
 
         <div class="row">
           <div class="col-25">
-            <label for="otn1">Option2*</label>
+            <label for="otn1">Option2</label>
           </div>
           <div class="col-75">
-            <input type="text" id="otn1" name="otn1" placeholder="">
+            <input type="text" id="otn2" name="otn2" [(ngModel)]="otn2" placeholder="">
           </div>
         </div>
 
         <div class="row">
           <div class="col-25">
-            <label for="otn1">Option3*</label>
+            <label for="otn1">Option3</label>
           </div>
           <div class="col-75">
-            <input type="text" id="otn1" name="otn1" placeholder="">
+            <input type="text" id="otn3" name="otn3" [(ngModel)]="otn3" placeholder="">
           </div>
         </div>
 
         <div class="row">
           <div class="col-25">
-            <label for="otn1">Option4*</label>
+            <label for="otn1">Option4</label>
           </div>
           <div class="col-75">
-            <input type="text" id="otn1" name="otn1" placeholder="">
+            <input type="text" id="otn4" name="otn4" [(ngModel)]="otn4" placeholder="">
           </div>
         </div>
 
         <div class="row">
           <div class="col-25">
-            <label for="country">Answer*</label>
+            <label for="country">Answer</label>
+          </div>
+          <div class="col-75">
+            <select id="country" name="country">
+              <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
+              <option value="usa">option4</option>
+            </select>
           </div>
         </div>
-
-        <div class="col-75">
-          <select id="country" name="country">
-            <option *ngFor="let answer of answerList" [value]="answer.id" >{{answer.value}}</option>
-          </select>
-        </div>
-
-        <!-- <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block"  href="login.html">Save and Add another Question</a>
-            </div>
-              <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block" href="login.html">Cancel</a>
-            </div>
-            <div class="btn btn-primary btn-block-row">
-              <a class="btn btn-primary btn-block"  href="login.html">Finish</a>
-            </div>
-          </div>
-        -->
+        
         <table style="width:100%">
           <tr>
           <th>
           <div class="btn btn-primary btn-block-row">
-            <a class="btn btn-primary btn-block"  href="add qestions.html">Save and Add Question</a>
+            <a class="btn btn-primary btn-block" (click)="reset()">Save and Add Question</a>
           </div>
-            <div class="btn btn-primary btn-block-row">
-            <a class="btn btn-primary btn-block" href="add qestions.html">Cancel</a>
-          </div>
+
           <div class="btn btn-primary btn-block-row">
             <a class="btn btn-primary btn-block" href ="exam management.html" >Finish</a>
           </div>

@@ -13,13 +13,11 @@
   
       </div>
   
-  
-  
   <div class="container">
   <div class="card card-register mx-auto mt-5">
     <div class="card-header">Exam Details</div>
     <div class="card-body">
-      <form #examForm="ngForm" (ngSubmit)="saveExam(examForm)">
+      <form #examForm="ngForm" >
      
         <div class="form-group">
         </div>
@@ -28,19 +26,17 @@
           <div class="form-row">
             <div class="col-md-6">
               <div class="form-label-group">
-                <input type="text" id="title" name="title" [(ngModel)]="title" class="form-control" placeholder="Title" required = "required"   >
+                <input type="text" id="title" name="title" [(ngModel)]="title" class="form-control" placeholder="Title" required = "required">
                 <label for="title">Exam Title</label>
               </div>
             </div>
             
             <div class="col-md-6">
               <div class="form-label-group">
-                <label for="module">Module</label>
-                <select name="module" id="module" ngModel class="custom-select" >
-                    <option *ngFor="let mod of modules" [value]="
-                    mod.id" >
-                        {{mod.name}
-                    </option>
+                <!-- <label for="module">Module</label> -->
+                <select  id="module" name="module" [(ngModel)]="selectedModule">
+                    <option *ngFor="let mod of modules" [value]="mod.id" >{{mod.module}}</option>
+                    <option value="usa">Module</option>
                 </select>  
             </div>
             </div>
@@ -91,42 +87,20 @@
     
         <div class="btn btn-primary btn-block-row">
           <!-- <a class="btn btn-primary btn-block">Done</a> -->
-          <button type="submit" class="btn btn-primary" routerLink="/CreateQuestion">Done</button>
+          <button type="submit" class="btn btn-primary" routerLink="/CreateQuestion" (click)="saveExam()">Done</button>
         </div>
     <!-- </div> -->
         </th>
         <th> 
         </th>
-        
-        <th>
-          <nav aria-label="...">
-            <ul class="pagination">
-              <li class="page-item disabled">
-                <span class="page-link">Previous</span>
-              </li>
-              <li class="page-item "><a class="" href="">2</a></li>
-              <li class="page-item active">
-                <span class="page-link">
-                        3
-                <span class="sr-only">(current)</span>
-                </span>
-              </li>
-              <li class="page-item"><a class="" href="">4</a></li>
-              <li class="page-item">
-              <a class="page-link" >Next</a>
-              </li>
-              </ul>
-              </nav>
-            </th>  
-            </tr>
-          
+        </tr>
     </table>
    </form>
    </div>
    </div>
    </div>
    </div>
+   Angular generated form model : {{examForm.value | json}}
   </div>
 
-  Angular generated form model : {{examForm.value | json}}
   

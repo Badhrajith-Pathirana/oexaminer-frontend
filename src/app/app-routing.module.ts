@@ -13,8 +13,6 @@ const routes: Routes = [
   { path: 'StudentDashboard', component: StdDashboardComponent },
   { path: 'CreateQuestion', component: QuestionComponent },
   { path: 'ExamManage', component: ExamManageComponent },
-  
-  
 ];
 
 @NgModule({
